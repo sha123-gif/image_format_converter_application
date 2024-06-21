@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %} {% if user %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome !</h1>
+    <p class="lead">You can now upload and convert your images.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="{{ url_for('convert') }}" role="button">Upload and Convert</a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('logout') }}" role="button">Logout</a>
+</div>
+{% else %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the Image Converter App</h1>
+    <p class="lead">This is a simple app to convert image formats.</p>
+    <hr class="my-4">
+    <p>Please log in to start converting your images.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+</div>
+{% endif %} {% endblock %}

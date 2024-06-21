@@ -1,0 +1,5 @@
+pip install flask flask_sqlalchemy flask_bcrypt flask_wtf pillow
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-color: black;
+            border-width: .6rem;
+        }
